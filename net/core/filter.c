@@ -3587,6 +3587,11 @@ err_clear:
 	return err;
 }
 
+BPF_CALL_1(bpf_get_comm_hash_from_sk, struct sk_buff *, skb)
+{
+	return 0;
+}
+
 static const struct bpf_func_proto bpf_skb_get_tunnel_opt_proto = {
 	.func		= bpf_skb_get_tunnel_opt,
 	.gpl_only	= false,
